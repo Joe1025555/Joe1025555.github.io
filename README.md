@@ -46,19 +46,22 @@
 
 ## 截圖範例
 
-### 登入畫面
+### 1.登入畫面
 
-1.[登入畫面](https://joe1025555.github.io/#login)
+[登入畫面](https://joe1025555.github.io/#login)
+
 ![alt text](<sing in  2025-09-01 150446.png>)
 
-### Joe自我介紹
+### 2.Joe自我介紹
 
-2.[Joe自我介紹](https://joe1025555.github.io/#joe)
+[Joe自我介紹](https://joe1025555.github.io/#joe)
+
 ![alt text](Joe.png)
 
-### Ting自我介紹
+### 3.Ting自我介紹
 
-3.[Ting自我介紹](https://joe1025555.github.io/#ting)
+[Ting自我介紹](https://joe1025555.github.io/#ting)
+
 ![alt text](Ting.png)
 
 ---
