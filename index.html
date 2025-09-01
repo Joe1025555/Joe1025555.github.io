@@ -3,16 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>展示網站 - 左側樹狀導航</title>
+  <title>展示網站 - 樹狀導航單頁</title>
   <style>
     body {
       font-family: "微軟正黑體", sans-serif;
       margin: 0;
       padding: 0;
-      background: #f5f5f5;
-      color: #333;
       display: flex;
       height: 100vh;
+      background: #f5f5f5;
     }
 
     /* 左側導航 */
@@ -31,6 +30,7 @@
     .sidebar li {
       padding: 10px 20px;
       cursor: pointer;
+      user-select: none;
     }
     .sidebar li:hover {
       background: #45a049;
@@ -46,7 +46,7 @@
       background: #388E3C;
     }
 
-    /* 右側內容區 */
+    /* 右側內容 */
     .content {
       flex-grow: 1;
       padding: 20px;
@@ -62,12 +62,28 @@
     .page.active {
       display: block;
     }
-    .profile img {
-      width: 120px;
-      height: 120px;
-      border-radius: 50%;
-      margin-bottom: 15px;
+
+    /* 搜尋框 */
+    .search-box {
+      text-align: center;
+      margin-bottom: 20px;
     }
+    .search-box input {
+      padding: 8px;
+      width: 200px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    .search-box button {
+      padding: 8px 15px;
+      border: none;
+      border-radius: 5px;
+      background: #4CAF50;
+      color: white;
+      cursor: pointer;
+    }
+
+    /* 登入與個人介紹 */
     .login input {
       width: 90%;
       padding: 8px;
@@ -82,6 +98,15 @@
       background: #4CAF50;
       color: white;
       cursor: pointer;
+    }
+    .profile {
+      text-align: center;
+    }
+    .profile img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      margin-bottom: 15px;
     }
   </style>
 </head>
@@ -102,6 +127,12 @@
 
   <!-- 右側內容 -->
   <div class="content">
+    <!-- 搜尋框 -->
+    <div class="search-box">
+      <input type="text" placeholder="搜尋 Joe 或 Ting" id="searchInput">
+      <button onclick="searchPerson()">搜尋</button>
+    </div>
+
     <!-- 登入頁 -->
     <div class="page" id="login">
       <h2>使用者登入</h2>
@@ -133,10 +164,15 @@
 
   <script>
     function showPage(pageId) {
+      // 隱藏所有頁面
       document.querySelectorAll('.page').forEach(page => {
         page.classList.remove('active');
       });
+      // 顯示目標頁面
       document.getElementById(pageId).classList.add('active');
+
+      // 更新網址 hash
+      history.replaceState(null, "", "#" + pageId);
     }
 
     function toggleSubmenu() {
@@ -144,8 +180,26 @@
       submenu.style.display = submenu.style.display === 'block' ? 'none' : 'block';
     }
 
-    // 初始顯示登入頁
-    showPage('login');
+    // 搜尋功能
+    function searchPerson() {
+      const keyword = document.getElementById('searchInput').value.trim().toLowerCase();
+      if(keyword === 'joe') showPage('joe');
+      else if(keyword === 'ting') showPage('ting');
+      else alert('找不到此人，請輸入 Joe 或 Ting');
+    }
+
+    // 監聽 hash 改變
+    window.addEventListener("hashchange", function() {
+      const hash = location.hash.substring(1);
+      if(hash) showPage(hash);
+    });
+
+    // 初始頁面
+    window.onload = function() {
+      const hash = location.hash.substring(1);
+      if(hash) showPage(hash);
+      else showPage('login');
+    }
   </script>
 
 </body>
