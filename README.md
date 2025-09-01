@@ -48,17 +48,17 @@
 
 ### 登入畫面
 
-[登入畫面](https://joe1025555.github.io/#login)
+1.[登入畫面](https://joe1025555.github.io/#login)
 ![alt text](<sing in  2025-09-01 150446.png>)
 
 ### Joe自我介紹
 
-[Joe自我介紹](https://joe1025555.github.io/#joe)
+2.[Joe自我介紹](https://joe1025555.github.io/#joe)
 ![alt text](Joe.png)
 
 ### Ting自我介紹
 
-[Ting自我介紹](https://joe1025555.github.io/#ting)
+3.[Ting自我介紹](https://joe1025555.github.io/#ting)
 ![alt text](Ting.png)
 
 ---
