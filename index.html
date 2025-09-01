@@ -1,54 +1,123 @@
 <!DOCTYPE html>
-<html lang="zh-Hant">
+<html lang="zh-TW">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>自我介紹</title>
-    <style>
-        body {
-            font-family: 'Microsoft JhengHei', Arial, sans-serif;
-            background-color: #f5f5f5;
-            margin: 0;
-            padding: 0;
-        }
-        .container {
-            max-width: 600px;
-            margin: 60px auto;
-            background: #fff;
-            border-radius: 10px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-            padding: 40px 30px;
-        }
-        h1 {
-            color: #2d89ef;
-            text-align: center;
-        }
-        p {
-            font-size: 1.1em;
-            line-height: 1.8;
-            color: #333;
-        }
-        .profile-img {
-            display: block;
-            margin: 0 auto 20px auto;
-            width: 120px;
-            height: 120px;
-            border-radius: 50%;
-            object-fit: cover;
-            background: #eee;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <title>前端展示網頁</title>
+  <style>
+    body {
+      font-family: "微軟正黑體", sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f5f5f5;
+      color: #333;
+    }
+    header {
+      background: #4CAF50;
+      color: white;
+      padding: 15px;
+      text-align: center;
+    }
+    .container {
+      width: 80%;
+      margin: 20px auto;
+    }
+    .search-box {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .search-box input {
+      padding: 10px;
+      width: 250px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    .search-box button {
+      padding: 10px 15px;
+      border: none;
+      border-radius: 5px;
+      background: #4CAF50;
+      color: white;
+      cursor: pointer;
+    }
+    .login {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      max-width: 300px;
+      margin: 0 auto 40px auto;
+      text-align: center;
+    }
+    .login input {
+      width: 90%;
+      padding: 8px;
+      margin: 10px 0;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    .login button {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      background: #4CAF50;
+      color: white;
+      cursor: pointer;
+    }
+    .profiles {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+    }
+    .profile {
+      background: white;
+      padding: 20px;
+      margin: 10px;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      width: 250px;
+      text-align: center;
+    }
+    .profile img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      margin-bottom: 15px;
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <img src="https://i.imgur.com/your-profile-image.png" alt="個人照片" class="profile-img">
-        <h1>你好，我是 Joe</h1>
-        <p>
-            我是一名前端網頁開發者，熱愛學習新技術與設計美觀的網站。<br>
-            目前專注於 HTML、CSS 及 JavaScript，並持續精進自己的程式能力。<br>
-            在閒暇時，我喜歡閱讀、攝影和參加開源專案。<br>
-            歡迎與我聯絡，一起交流成長！
-        </p>
+  <header>
+    <h1>展示網站</h1>
+  </header>
+
+  <div class="container">
+    <!-- 搜索框 -->
+    <div class="search-box">
+      <input type="text" placeholder="搜尋關鍵字...">
+      <button>搜尋</button>
     </div>
+
+    <!-- 登入表單 -->
+    <div class="login">
+      <h2>使用者登入</h2>
+      <input type="text" placeholder="帳號">
+      <input type="password" placeholder="密碼">
+      <button>登入</button>
+    </div>
+
+    <!-- 兩個人的自我介紹 -->
+    <div class="profiles">
+      <div class="profile">
+        <img src="https://via.placeholder.com/100" alt="Person 1">
+        <h3>張小明</h3>
+        <p>大家好，我是張小明，喜歡程式設計與電子電路，夢想是成為硬體研發工程師。</p>
+      </div>
+      <div class="profile">
+        <img src="https://via.placeholder.com/100" alt="Person 2">
+        <h3>李小華</h3>
+        <p>嗨，我是李小華，對網路安全與後端技術有濃厚興趣，未來想挑戰資安領域。</p>
+      </div>
+    </div>
+  </div>
 </body>
 </html>
