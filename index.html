@@ -17,6 +17,26 @@
       padding: 15px;
       text-align: center;
     }
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      padding: 0;
+      margin: 10px 0 0 0;
+    }
+    nav ul li {
+      margin: 0 15px;
+    }
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 16px;
+      transition: text-decoration 0.2s;
+    }
+    nav ul li a:hover {
+      text-decoration: underline;
+    }
     .container {
       width: 80%;
       margin: 20px auto;
@@ -88,6 +108,13 @@
 <body>
   <header>
     <h1>展示網站</h1>
+    <nav>
+      <ul>
+        <li><a href="#login">帳戶密碼頁面</a></li>
+        <li><a href="#joe">Joe自我介紹</a></li>
+        <li><a href="#ting">Ting自我介紹</a></li>
+      </ul>
+    </nav>
   </header>
 
   <div class="container">
@@ -98,7 +125,7 @@
     </div>
 
     <!-- 登入表單 -->
-    <div class="login">
+    <div class="login" id="login">
       <h2>使用者登入</h2>
       <input type="text" placeholder="帳號">
       <input type="password" placeholder="密碼">
@@ -107,17 +134,13 @@
 
     <!-- 兩個人的自我介紹 -->
     <div class="profiles">
-      <div class="profile">
+      <div class="profile" id="joe">
         <img src="https://via.placeholder.com/100" alt="Person 1">
         <h3>鍾鈞全 Joe</h3>
         <p>大家好，我是鍾鈞全 Joe，喜歡程式設計與電子電路，夢想是成為硬體研發工程師。</p>
       </div>
-      <div class="profile">
+      <div class="profile" id="ting">
         <img src="https://via.placeholder.com/100" alt="Person 2">
         <h3>曾瑋庭 Ting</h3>
         <p>嗨，我是曾瑋庭 Ting，對網路安全與後端技術有濃厚興趣，未來想挑戰資安領域。</p>
       </div>
-    </div>
-  </div>
-</body>
-</html>
