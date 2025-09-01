@@ -85,7 +85,7 @@
     }
     .profiles {
       display: flex;
-      justify-content: space-around;
+      justify-content: center;
       flex-wrap: wrap;
     }
     .profile {
@@ -104,6 +104,19 @@
       margin-bottom: 15px;
     }
   </style>
+  <script>
+    function showSection(section) {
+      document.getElementById('login').style.display = section === 'login' ? 'block' : 'none';
+      document.getElementById('joe').style.display = section === 'joe' ? 'flex' : 'none';
+      document.getElementById('ting').style.display = section === 'ting' ? 'flex' : 'none';
+    }
+    window.onload = function() {
+      showSection('login');
+      document.querySelector('a[href="#login"]').onclick = function() { showSection('login'); return false; };
+      document.querySelector('a[href="#joe"]').onclick = function() { showSection('joe'); return false; };
+      document.querySelector('a[href="#ting"]').onclick = function() { showSection('ting'); return false; };
+    };
+  </script>
 </head>
 <body>
   <header>
@@ -132,15 +145,22 @@
       <button>登入</button>
     </div>
 
-    <!-- 兩個人的自我介紹 -->
-    <div class="profiles">
-      <div class="profile" id="joe">
+    <!-- Joe自我介紹 -->
+    <div class="profiles" id="joe" style="display:none;">
+      <div class="profile">
         <img src="https://via.placeholder.com/100" alt="Person 1">
         <h3>鍾鈞全 Joe</h3>
         <p>大家好，我是鍾鈞全 Joe，喜歡程式設計與電子電路，夢想是成為硬體研發工程師。</p>
       </div>
-      <div class="profile" id="ting">
+    </div>
+    <!-- Ting自我介紹 -->
+    <div class="profiles" id="ting" style="display:none;">
+      <div class="profile">
         <img src="https://via.placeholder.com/100" alt="Person 2">
         <h3>曾瑋庭 Ting</h3>
         <p>嗨，我是曾瑋庭 Ting，對網路安全與後端技術有濃厚興趣，未來想挑戰資安領域。</p>
       </div>
+    </div>
+  </div>
+</body>
+</html>
