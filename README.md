@@ -6,11 +6,13 @@
 
 ## 一般資訊
 
-* **網站名稱**：新員工自我介紹
-* **官方網址**：[https://你的網站網址.com](https://你的網站網址.com)
-* **GitHub 原始碼**：[https://github.com/你的帳號/你的專案](https://github.com/你的帳號/你的專案)
-* **使用說明文件**：[https://你的網站網址.com/docs](https://你的網站網址.com/docs)
-* **討論區 / 聯絡方式**：[https://你的網站網址.com/forum](https://你的網站網址.com/forum)
+* **網站名稱**：新員工自我介紹 [Joe](https://github.com/Joe1025555/Joe1025555.github.io/blob/main/README.md#2-joe%E8%87%AA%E6%88%91%E4%BB%8B%E7%B4%B9)
+[Ting](https://github.com/Joe1025555/Joe1025555.github.io/blob/main/README.md#3-ting%E8%87%AA%E6%88%91%E4%BB%8B%E7%B4%B9)
+
+
+* **GitHub 原始碼**：[index](https://github.com/Joe1025555/Joe1025555.github.io/blob/main/index.html)
+
+* **討論區 / 聯絡方式**：[連結](https://github.com/Joe1025555/Joe1025555.github.io/blob/main/README.md#%E8%81%AF%E7%B5%A1%E6%96%B9%E5%BC%8F)
 
 ---
 
@@ -28,19 +30,6 @@
 * 登入帳號
 * 使用搜尋功能快速找到內容
 * 點擊使用者名稱查看自我介紹
-
----
-
-## 文件與幫助
-
-* 線上文件：[https://你的網站網址.com/docs](https://你的網站網址.com/docs)
-* 支援格式：HTML、PDF、Markdown
-* 文件內容：
-
-  * 安裝指南
-  * 功能說明
-  * API 使用方法
-  * 使用範例與截圖
 
 ---
 
