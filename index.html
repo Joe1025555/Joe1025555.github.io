@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>綠創新_新人介紹</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
   <style>
     body {
       font-family: "微軟正黑體", sans-serif;
@@ -54,13 +56,16 @@
     }
     .page {
       display: none;
+      opacity: 0;
       background: white;
       padding: 20px;
       border-radius: 10px;
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      transition: opacity 0.5s;
     }
     .page.active {
       display: block;
+      opacity: 1;
     }
 
     /* 搜尋框 */
@@ -108,6 +113,26 @@
       border-radius: 50%;
       margin-bottom: 15px;
     }
+
+    /* 時鐘與日曆 */
+    #clock {
+      font-size: 1.5em;
+      margin: 10px 0;
+      color: #333;
+    }
+    #date {
+      font-size: 1.2em;
+      color: #555;
+      margin-bottom: 20px;
+    }
+
+    /* 地圖 */
+    #map {
+      height: 400px;
+      width: 100%;
+      border-radius: 12px;
+      margin-top: 20px;
+    }
   </style>
 </head>
 <body>
@@ -150,6 +175,11 @@
         <h3>鍾鈞全 Joe</h3>
         <p>大家好，我是鍾鈞全 Joe，喜歡程式與電子電路，夢想是成為硬體研發工程師。</p>
       </div>
+      <!-- 加入即時時鐘與日曆 -->
+      <div id="clock"></div>
+      <div id="date"></div>
+      <!-- 加入地圖 -->
+      <div id="map"></div>
     </div>
 
     <!-- Ting -->
@@ -164,14 +194,10 @@
 
   <script>
     function showPage(pageId) {
-      // 隱藏所有頁面
       document.querySelectorAll('.page').forEach(page => {
         page.classList.remove('active');
       });
-      // 顯示目標頁面
       document.getElementById(pageId).classList.add('active');
-
-      // 更新網址 hash
       history.replaceState(null, "", "#" + pageId);
     }
 
@@ -180,11 +206,11 @@
       submenu.style.display = submenu.style.display === 'block' ? 'none' : 'block';
     }
 
-    // 搜尋功能
+    // 模糊搜尋
     function searchPerson() {
       const keyword = document.getElementById('searchInput').value.trim().toLowerCase();
-      if(keyword === 'joe') showPage('joe');
-      else if(keyword === 'ting') showPage('ting');
+      if(keyword.includes('joe')) showPage('joe');
+      else if(keyword.includes('ting')) showPage('ting');
       else alert('找不到此人，請輸入 Joe 或 Ting');
     }
 
@@ -199,6 +225,24 @@
       const hash = location.hash.substring(1);
       if(hash) showPage(hash);
       else showPage('login');
+
+      // 啟動時鐘
+      function updateTime() {
+        const now = new Date();
+        document.getElementById("clock").innerText = now.toLocaleTimeString();
+        document.getElementById("date").innerText = now.toLocaleDateString();
+      }
+      setInterval(updateTime, 1000);
+      updateTime();
+
+      // 初始化地圖（台北車站）
+      var map = L.map('map').setView([25.044057931032608, 121.52559626109898], 15);
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; OpenStreetMap 貢獻者'
+      }).addTo(map);
+      L.marker([25.044057931032608, 121.52559626109898]).addTo(map)
+        .bindPopup("🚉 台北車站")
+        .openPopup();
     }
   </script>
 
