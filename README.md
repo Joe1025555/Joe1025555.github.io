@@ -48,19 +48,18 @@
 
 ### 登入畫面
 
-![登入畫面](https://你的網站網址.com/images/login.png)
+[登入畫面](https://joe1025555.github.io/#login)
+![alt text](<sing in  2025-09-01 150446.png>)
 
-### 主頁面
+### Joe自我介紹
 
-![主頁面](https://你的網站網址.com/images/home.png)
+[Joe自我介紹](https://joe1025555.github.io/#joe)
+![alt text](Joe.png)
 
-### 搜尋功能
+### Ting自我介紹
 
-![搜尋功能](https://你的網站網址.com/images/search.png)
-
-### 圖表與資料表
-
-![圖表與資料表](https://你的網站網址.com/images/chart.png)
+[Ting自我介紹](https://joe1025555.github.io/#ting)
+![alt text](Ting.png)
 
 ---
 
@@ -77,4 +76,5 @@
 * 電子郵件：[Joe@3rgit.com.tw](mailto:Joe@3rgit.com.tw)
 
 * 電子郵件：[Ting@3rgit.com.tw](mailto:Ting@3rgit.com.tw)
+
 ---
