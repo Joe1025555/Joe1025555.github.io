@@ -166,6 +166,11 @@
         <input type="password" placeholder="密碼">
         <button onclick="alert('登入功能測試')">登入</button>
       </div>
+      <!-- 加入即時時鐘與日曆 -->
+      <div id="clock"></div>
+      <div id="date"></div>
+      <!-- 加入地圖 -->
+      <div id="map"></div>
     </div>
 
     <!-- Joe -->
@@ -175,11 +180,6 @@
         <h3>鍾鈞全 Joe</h3>
         <p>大家好，我是鍾鈞全 Joe，喜歡程式與電子電路，夢想是成為硬體研發工程師。</p>
       </div>
-      <!-- 加入即時時鐘與日曆 -->
-      <div id="clock"></div>
-      <div id="date"></div>
-      <!-- 加入地圖 -->
-      <div id="map"></div>
     </div>
 
     <!-- Ting -->
@@ -241,7 +241,7 @@
         attribution: '&copy; OpenStreetMap 貢獻者'
       }).addTo(map);
       L.marker([25.044057931032608, 121.52559626109898]).addTo(map)
-        .bindPopup("🚉 台北車站")
+        .bindPopup("綠創新科技股份有限公司<br>台北車站附近")
         .openPopup();
     }
   </script>
